@@ -32,7 +32,7 @@ public class FirstClass extends HttpServlet {
                 request.getParameter("firstName"),
                 request.getParameter("lastName"),
                 request.getParameter("phone"),
-                request.getParameterValues("places"),
+                request.getParameterValues("info"),
                 request.getParameter("wishes")
         );
 

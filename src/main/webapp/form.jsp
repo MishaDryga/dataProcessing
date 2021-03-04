@@ -96,8 +96,8 @@
 						</div>
 						</div>
 						<div class="form-group has-feedback">
-						<label class="sr-only" for="information">Additional Information</label>
-						<textarea class="form-control" rows="8" id="wishes" placeholder="Additional Information" name="information" required></textarea>
+						<label class="sr-only" for="wishes">Additional Information</label>
+						<textarea class="form-control" rows="8" id="wishes" placeholder="Additional Information" name="wishes" required></textarea>
 						<i class="fa fa-pencil form-control-feedback"></i>
 						</div>
 						<input type="submit" value="Send" class="btn btn-default center-block">

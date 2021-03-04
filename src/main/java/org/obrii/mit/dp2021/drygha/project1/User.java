@@ -18,7 +18,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String phone;
-    private List<String> places;
+    private List<String> info;
     private String wishes;
 
     public User() {
@@ -28,7 +28,7 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
-        if (places != null) this.places = Arrays.asList(places);
+        if (places != null) this.info = Arrays.asList(places);
         this.wishes = wishes;
     }
 
@@ -45,7 +45,7 @@ public class User {
     }
 
     public List<String> getPlaces() {
-        return places;
+        return info;
     }
 
     public String getWishes() {
