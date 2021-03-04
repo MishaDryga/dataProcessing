@@ -21,9 +21,9 @@ import org.obrii.mit.dp2021.drygha.project1.data.CrudDataInterface;
 
 /**
  *
- * @author 38068
+ * @author Mkarlos
  */
-public class FilesCrud extends CrudDataInterface {
+public class FilesCrud implements CrudDataInterface {
 
     private File file;
 

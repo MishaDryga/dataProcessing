@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author 38068
+ * @author Mkarlos
  */
 public class Data implements Serializable{
     

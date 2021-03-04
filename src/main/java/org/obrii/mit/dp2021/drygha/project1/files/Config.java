@@ -7,7 +7,7 @@ package org.obrii.mit.dp2021.drygha.project1.files;
 
 /**
  *
- * @author 38068
+ * @author Mkarlos
  */
 public class Config {
     

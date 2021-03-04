@@ -5,10 +5,22 @@
  */
 package org.obrii.mit.dp2021.drygha.project1.data;
 
+import java.util.List;
+
 /**
  *
  * @author Mkarlos
  */
-public class CrudDataInterface {
-    
+public interface CrudDataInterface {
+
+    void createData(Data addingData);
+
+    List<Data> readData();
+
+    void updateData(int id, Data data);
+
+    void deleteData(int id);
+
+    void writeData(List<Data> data);
+
 }
