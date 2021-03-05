@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author danila
  */
-@WebServlet(name = "DataServlet", urlPatterns = {"/Data"})
+@WebServlet(name = "DataServlet", urlPatterns = {""})
 public class DataServlet extends HttpServlet {
 
     
