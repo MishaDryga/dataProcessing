@@ -1,10 +1,6 @@
 package org.obrii.mit.dp2021.drygha.project1;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 import java.io.File;
 import java.io.IOException;
@@ -19,13 +15,13 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author danila
+ * @author Mkarlos
  */
-@WebServlet(name = "DataServlet", urlPatterns = {""})
+@WebServlet(name = "DataServlet", urlPatterns = {"/"})
 public class DataServlet extends HttpServlet {
 
     
-    DataInt dataCrud = new FileInt(new File(FileClass.getFileName()));
+    FileInt dataCrud = new FileInt(new File(FileClass.getFileName()));
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -36,7 +32,7 @@ public class DataServlet extends HttpServlet {
             dataCrud = new FileInt(new File(FileClass.getFileName()));
         }
                 
-                if(request.getParameter("search")!=null){
+               if(request.getParameter("search")!=null){
                 request.setAttribute("data", dataCrud.searchData(request.getParameter("search")));
                 }
                 else{

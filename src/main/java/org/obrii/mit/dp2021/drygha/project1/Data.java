@@ -13,7 +13,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author danila
+ * @author Mkarlos
  */
 public class  Data implements Serializable {
     private int id;
