@@ -25,9 +25,6 @@
                 <link rel="stylesheet" href="WEB-INF/css/bootstrap.min.css">
                 <!-- Style CSS -->
                 <link rel="stylesheet" href="WEB-INF/css/style.css">
-		<!-- Web Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
 
 		
 	</head>
@@ -73,15 +70,15 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 object-non-visible" data-animation-effect="fadeIn">
 							<h1 class="text-center">Thank <span>you!</span></h1>
-							<p class="lead text-center">Dear, <%= user.getFirstName()%> <%= user.getLastName()%>, thank you for your attention.
+							<p class="lead text-center"><%= user.getFirstName()%> <%= user.getLastName()%>
 								<%
 									if (user.getPlaces() != null) {
 										out.print("You choose: " + user.getPlaces() + ", you will receive the latest news ");
 									} else {
-										out.print("You didn't choose a preference. We ");
+										out.print("You didn't choose a preference.");
 									}
 								%>
-							 will phone you, by this number : <%= user.getPhone()%>. Your willing will be satisfied!</p>
+							 number : <%= user.getPhone()%></p>
 							<button class="start-btn btn btn-default center-block"><a href="<%=request.getContextPath()%>">Home</a></button>
 						</div>
 					</div>
