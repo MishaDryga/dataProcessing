@@ -14,12 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Drygha</title>
-    <link rel="shortcut icon" href="WEB-INF/img/favicon.ico">
     <!-- Bootstrap 4.5 CSS -->
-    <link href="WEB-INF/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="<%=request.getContextPath()%>/WEB-INF/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     
     <!-- Style CSS -->
-    <link href="WEB-INF/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="<%=request.getContextPath()%>/WEB-INF/css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
