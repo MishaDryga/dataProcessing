@@ -81,13 +81,13 @@
 						<div>
 					        <p>that you are interested in?</p>
 						<div class="spans">
-						<span><input id="mountains" type="checkbox" value="Technology" value="technology" name="info">Technology
+						<span><input id="technology" type="checkbox" value="Technology" value="technology" name="info">Technology
 						    <label class="sr-only" for="technology">Technology</label>
                                                 </span>
-						<span><input id="sea" type="checkbox" value="Law" value="law" name="info">Law
+						<span><input id="law" type="checkbox" value="Law" value="law" name="info">Law
 							<label class="sr-only" for="law">Law</label>
 						</span>
-						<span><input id="forest" type="checkbox" value="Programming" value="programming" name="info">Programming
+						<span><input id="programming" type="checkbox" value="Programming" value="programming" name="info">Programming
 							<label class="sr-only" for="programming">Programming</label>
 						</span>
 						</div>

@@ -70,8 +70,8 @@
 							<h1 class="text-center">Thank <span>you!</span></h1>
 							<p class="lead text-center"><%= user.getFirstName()%> <%= user.getLastName()%>
 								<%
-									if (user.getPlaces() != null) {
-										out.print("You choose: " + user.getPlaces() + ", you will receive the latest news ");
+									if (user.getInfo() != null) {
+										out.print("You choose: " + user.getInfo() + ", you will receive the latest news ");
 									} else {
 										out.print("You didn't choose a preference.");
 									}

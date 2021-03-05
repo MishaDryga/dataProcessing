@@ -24,11 +24,11 @@ public class User {
     public User() {
     }
     
-    public User(String firstName, String lastName, String phone, String[] places, String wishes) {
+    public User(String firstName, String lastName, String phone, String[] info, String wishes) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
-        if (places != null) this.info = Arrays.asList(places);
+        if (info != null) this.info = Arrays.asList(info);
         this.wishes = wishes;
     }
 
@@ -44,7 +44,7 @@ public class User {
         return phone;
     }
 
-    public List<String> getPlaces() {
+    public List<String> getInfo() {
         return info;
     }
 
