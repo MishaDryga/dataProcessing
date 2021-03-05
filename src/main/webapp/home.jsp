@@ -4,7 +4,7 @@
     Author     : ПК
 --%>
 
-<%@page import="org.obrii.mit.dp2021.margoi.margoproject.Data"%>
+<%@page import="org.obrii.mit.dp2021.drygha.project1.Data"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
