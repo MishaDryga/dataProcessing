@@ -3,37 +3,43 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.obrii.mit.dp2021.drygha.project1.data;
+package org.obrii.mit.dp2021.drygha.project1;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 
 import java.io.Serializable;
 
+
+
 /**
  *
- * @author Mkarlos
+ * @author NEVM PC
  */
-public class Data implements Serializable{
-    
+public class  Data implements Serializable {
     private int id;
     private String name;
     private int age;
-    private String email;
 
     public Data() {
     }
 
-    public Data(int id, String name, int age, String email) {
+    public Data(int id, String name, int age) {
         this.id = id;
         this.name = name;
         this.age = age;
-        this.email = email;
     }
 
-    public String getEmail() {
-        return email;
+    public int getAge() {
+        return age;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public int getId() {
@@ -52,20 +58,15 @@ public class Data implements Serializable{
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     @Override
     public String toString() {
-        return "Data{" + "id=" + id + ", name=" + name + ", age=" + age + ", email=" + email + '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Data{id=").append(id);
+        sb.append(", name=").append(name);
+        sb.append(", age=").append(age);
+        sb.append('}');
+        return sb.toString();
     }
-    
-    
     
     
     

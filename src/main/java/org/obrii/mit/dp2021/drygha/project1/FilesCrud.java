@@ -1,9 +1,11 @@
+package org.obrii.mit.dp2021.drygha.project1;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.obrii.mit.dp2021.drygha.project1.files;
+
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,14 +18,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.obrii.mit.dp2021.drygha.project1.data.Data;
-import org.obrii.mit.dp2021.drygha.project1.data.CrudDataInterface;
+
+
 
 /**
  *
- * @author Mkarlos
+ * @author 38068
  */
-public class FilesCrud implements CrudDataInterface {
+public class FilesCrud implements DataCrudInterface {
 
     private File file;
 
@@ -55,6 +57,29 @@ public class FilesCrud implements CrudDataInterface {
 
     }
 
+      @Override
+    public List<Data> searchData(String s) {
+
+ 
+       
+            
+            List<Data> newData = new ArrayList<>();
+        for (Data d : this.readData()) {
+            
+            if(d.getName().contains(s)){
+                newData.add(d);}
+                
+            
+        }
+        
+
+            return newData;
+
+        
+
+    }
+    
+    
     @Override
     public List<Data> readData() {
 
@@ -68,10 +93,10 @@ public class FilesCrud implements CrudDataInterface {
 
         } catch (FileNotFoundException ex) {
             Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
+            return new ArrayList<Data>();
         } catch (IOException | ClassNotFoundException ex) {
             Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
+            return new ArrayList<Data>();
         }
 
     }
@@ -79,6 +104,7 @@ public class FilesCrud implements CrudDataInterface {
     @Override
     public void createData(Data addingData) {
         List<Data> data = this.readData();
+        addingData.setId(data.size());
         data.add(addingData);
         this.writeData(data);
 
@@ -107,6 +133,19 @@ public class FilesCrud implements CrudDataInterface {
         this.writeData(newData);
     }
 
+       public void stData() {        
+        List<Data> newData = new ArrayList<>();
+        int i = 0;
+        for (Data d : this.readData()) {
+            d.setId(i);
+            i++;
+                newData.add(d);
+            
+        }
+        this.writeData(newData);
+    }
+
+    
     public File getFile() {
         return file;
     }
