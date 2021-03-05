@@ -16,9 +16,10 @@
     <title>Drygha</title>
     <link rel="shortcut icon" href="WEB-INF/img/favicon.ico">
     <!-- Bootstrap 4.5 CSS -->
-    <link rel="stylesheet" href="WEB-INF/css/bootstrap.min.css">
+    <link href="WEB-INF/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    
     <!-- Style CSS -->
-    <link rel="stylesheet" href="WEB-INF/css/style.css">
+    <link href="WEB-INF/css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
