@@ -85,7 +85,7 @@
 						<span><input id="mountains" type="checkbox" value="Technology" value="technology" name="info">
 						    <label class="sr-only" for="technology">Technology</label>
                                                 </span>
-						<span><input id="sea" type="checkbox" value="Law" value="law" name="info"> Law
+						<span><input id="sea" type="checkbox" value="Law" value="law" name="info">
 							<label class="sr-only" for="law">Law</label>
 						</span>
 						<span><input id="forest" type="checkbox" value="Programming" value="programming" name="info">
