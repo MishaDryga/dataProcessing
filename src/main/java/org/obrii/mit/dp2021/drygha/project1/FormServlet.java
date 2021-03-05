@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "FormServlet", urlPatterns = {"/Forma"})
 public class FormServlet extends HttpServlet {
     
-    DataServlet1 dataServlet = new DataServlet1();
+    DataServlet dataServlet = new DataServlet();
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
