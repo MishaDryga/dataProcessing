@@ -20,9 +20,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
                 <!-- Bootstrap 4.5 CSS -->
-                <link rel="stylesheet" href="<%=request.getContextPath()%>/WEB-INF/css/bootstrap.min.css">
+                <link rel="stylesheet" href="<%=request.getContextPath()%>/bootstrap.min.css">
                 <!-- Style CSS -->
-                <link rel="stylesheet" href="<%=request.getContextPath()%>/WEB-INF/css/style.css">
+                <link rel="stylesheet" href="<%=request.getContextPath()%>/style.css">
 
 		
 	</head>
