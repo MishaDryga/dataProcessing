@@ -23,16 +23,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author 38068
+ * @author danila
  */
-public class FilesCrud implements DataCrudInterface {
+public class FileInt implements DataInt {
 
     private File file;
 
-    public FilesCrud() {
+    public FileInt() {
     }
 
-    public FilesCrud(File file) {
+    public FileInt(File file) {
         this.file = file;
     }
 
@@ -45,14 +45,14 @@ public class FilesCrud implements DataCrudInterface {
                 try {
                     o.writeObject(d);
                 } catch (IOException ex) {
-                    Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(FileInt.class.getName()).log(Level.SEVERE, null, ex);
                 }
             });
 
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileInt.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileInt.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
@@ -68,15 +68,10 @@ public class FilesCrud implements DataCrudInterface {
             
             if(d.getName().contains(s)){
                 newData.add(d);}
-                
-            
         }
         
 
             return newData;
-
-        
-
     }
     
     
@@ -92,10 +87,10 @@ public class FilesCrud implements DataCrudInterface {
             return result;
 
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileInt.class.getName()).log(Level.SEVERE, null, ex);
             return new ArrayList<Data>();
         } catch (IOException | ClassNotFoundException ex) {
-            Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileInt.class.getName()).log(Level.SEVERE, null, ex);
             return new ArrayList<Data>();
         }
 

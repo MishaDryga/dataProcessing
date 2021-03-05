@@ -8,62 +8,32 @@ package org.obrii.mit.dp2021.drygha.project1;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import org.obrii.mit.dp2021.drygha.project1.Data;
-import org.obrii.mit.dp2021.drygha.project1.Config;
-import org.obrii.mit.dp2021.drygha.project1.FilesCrud;
-import org.obrii.mit.dp2021.drygha.project1.DataCrudInterface;
 
 
 
 
 /**
  *
- * @author NEVM PC
+ * @author danila
  */
 @WebServlet(name = "DataServlet", urlPatterns = {"/Data"})
 public class DataServlet extends HttpServlet {
 
     
-   // DataCrudInterface dataCrud = new StoreCrud();
-            DataCrudInterface dataCrud = new FilesCrud(new File(Config.getFileName()));
-       //   dataCrud.setFileName(new File("feef.txt"));
-            //StoreCrud(File file)
-            
-            
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    DataInt dataCrud = new FileInt(new File(FileClass.getFileName()));
 
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-                if (Config.getFileName().equals("")) {
-            Config.setFileName(this.getServletContext().getRealPath("") + "data.txt");
-            dataCrud = new FilesCrud(new File(Config.getFileName()));
+                if (FileClass.getFileName().equals("")) {
+            FileClass.setFileName(this.getServletContext().getRealPath("") + "data.txt");
+            dataCrud = new FileInt(new File(FileClass.getFileName()));
         }
                 
                 if(request.getParameter("search")!=null){
@@ -73,21 +43,8 @@ public class DataServlet extends HttpServlet {
                 request.setAttribute("data", dataCrud.readData());
                 }
                 request.getRequestDispatcher("home.jsp").forward(request, response); 
-        
-        
-        
-        
-        
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -109,7 +66,7 @@ public class DataServlet extends HttpServlet {
         doGet(request, response);
     }
 
-      @Override
+    @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        int myId = Integer.parseInt(request.getParameter("id"));
@@ -123,7 +80,8 @@ public class DataServlet extends HttpServlet {
         );
        doGet(request, response);
     }
-      @Override
+    
+    @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
          int myId = Integer.parseInt(request.getParameter("id"));
@@ -131,22 +89,12 @@ public class DataServlet extends HttpServlet {
         
         );
        dataCrud.stData();
-      // for (int i = dataCrud.readData().size(); i > 0; i--){
-  //  System.out.printf("Квадрат числа %d равен %d \n", i, i * i);
-//}
-       
-       
-        doGet(request, response);
+       doGet(request, response);
        
     }
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
+    }
 
 }

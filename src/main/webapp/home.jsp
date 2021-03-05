@@ -1,7 +1,7 @@
 <%-- 
     Document   : home.jsp
-    Created on : 01.03.2021, 12:15:55
-    Author     : ПК
+    Created on : 05.03.2021, 18:35:39
+    Author     : danila
 --%>
 
 <%@page import="org.obrii.mit.dp2021.drygha.project1.Data"%>
@@ -19,7 +19,7 @@
         <title>home</title>
     </head>
     <body id="home__main">
-        <h1>Misha Lab 3 main page</h1>
+        <h1>Dan4ef Lab 3 main page</h1>
         <form action= "<%=request.getContextPath()%>/Data" method="get" id="sr__home">
             <input type="text" name="search">
             <input type="submit" value="search data">

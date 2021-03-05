@@ -9,9 +9,9 @@ package org.obrii.mit.dp2021.drygha.project1;
 
 /**
  *
- * @author 38068
+ * @author danila
  */
-public class Config {
+public class FileClass {
     
       private static String fileName="";
     
