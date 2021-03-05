@@ -20,9 +20,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="shortcut icon" href="WEB-INF/img/favicon.ico">
                 <!-- Bootstrap 4.5 CSS -->
-                <link rel="stylesheet" href="WEB-INF/css/bootstrap.min.css">
+                <link rel="stylesheet" href="<%=request.getContextPath()%>/WEB-INF/css/bootstrap.min.css">
                 <!-- Style CSS -->
-                <link rel="stylesheet" href="WEB-INF/css/style.css">
+                <link rel="stylesheet" href="<%=request.getContextPath()%>/WEB-INF/css/style.css">
 	
 	</head>
 
