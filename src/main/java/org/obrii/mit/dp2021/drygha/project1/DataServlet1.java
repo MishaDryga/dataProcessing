@@ -21,8 +21,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author danila
  */
-@WebServlet(name = "DataServlet", urlPatterns = {"/Data"})
-public class DataServlet extends HttpServlet {
+@WebServlet(name = "DataServlet1", urlPatterns = {"/Data"})
+public class DataServlet1 extends HttpServlet {
 
     
     DataInt dataCrud = new FileInt(new File(FileClass.getFileName()));
@@ -98,3 +98,4 @@ public class DataServlet extends HttpServlet {
     }
 
 }
+
