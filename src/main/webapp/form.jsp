@@ -20,9 +20,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link rel="shortcut icon" href="WEB-INF/img/favicon.ico">
                 <!-- Bootstrap 4.5 CSS -->
-                <link rel="stylesheet" href="<%=request.getContextPath()%>/WEB-INF/css/bootstrap.min.css">
+                <link rel="stylesheet" href="<%=request.getContextPath()%>/bootstrap.min.css">
                 <!-- Style CSS -->
-                <link rel="stylesheet" href="<%=request.getContextPath()%>/WEB-INF/css/style.css">
+                <link rel="stylesheet" href="<%=request.getContextPath()%>/style.css">
 	
 	</head>
 
@@ -62,45 +62,41 @@
 			<div class="row">
 				<div class="col-sm-5">
 				    <div class="footer-content">
-					<form role="form" id="footer-form" action="<%=request.getContextPath()%>/form" method="POST">
-						<div class="form-group has-feedback">
-						    <label class="sr-only" for="firstName">First name</label>
-						    <input type="text" class="form-control" id="firstName" placeholder="First name" name="firstName" required>
-						    <i class="fa fa-user form-control-feedback"></i>
-						</div>
-						<div class="form-group has-feedback">
-						<label class="sr-only" for="lastName">Last name</label>
-						<input type="text" class="form-control" id="lastName" placeholder="Last name" name="lastName" required>
-						<i class="fa fa-user form-control-feedback"></i>
-					        </div>
-						<div class="form-group has-feedback">
-							<label class="sr-only" for="phone">Phone</label>
-							<input type="tel" class="form-control" id="phone" placeholder="Phone" name="phone" required>
-							<i class="fa fa-phone form-control-feedback"></i>
-						</div>
-						<div class="form-group has-feedback outline">
-						<div>
-					        <p>that you are interested in?</p>
-						<div class="spans">
-						<span><input id="mountains" type="checkbox" value="Technology" value="technology" name="info">
-						    <label class="sr-only" for="technology">Technology</label>
-                                                </span>
-						<span><input id="sea" type="checkbox" value="Law" value="law" name="info">
-							<label class="sr-only" for="law">Law</label>
-						</span>
-						<span><input id="forest" type="checkbox" value="Programming" value="programming" name="info">
-							<label class="sr-only" for="programming">Programming</label>
-						</span>
-						</div>
-						</div>
-						</div>
-						<div class="form-group has-feedback">
-						<label class="sr-only" for="wishes">Additional Information</label>
-						<textarea class="form-control" rows="8" id="wishes" placeholder="Additional Information" name="wishes" required></textarea>
-						<i class="fa fa-pencil form-control-feedback"></i>
-						</div>
-						<input type="submit" value="Send" class="btn btn-default center-block">
-					</form>
+					<form action="<%=request.getContextPath()%>/form" method="post">
+                                            Your name <br>
+                                            <input type="text" name="name" placeholder="Your name"><br/><br>
+
+                                            Number:<br>
+                                            <input name="phone" type="tel" pattern="+380\d\d\d\d\d\d\d\d\d" placeholder="+380123456789" minlength="13" maxlength="13" required><br/><br>
+
+                                          
+
+                                            Gender: 
+                                            <input type="radio" name="gender" value="male">Male    
+                                            <input type="radio" name="gender" value="female">Female<br/><br>
+
+                                            <div>
+                                                Your languages: 
+                                                <div class="checkb">
+                                                    <input type="checkbox" name="language" value="Ukrainian">Ukrainian
+                                                    <input type="checkbox" name="language" value="Russian">Russian
+                                                    <input type="checkbox" name="language" value="English">English
+                                                    <input type="checkbox" name="language" value="German">German <br/><br>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                Country: 
+                                                <select name="country">
+                                                    <option value="Ukraine">Ukraine</option>
+                                                    <option value="Russia">Russia</option>
+                                                    <option value="United Kingdoms">United Kingdoms</option>
+                                                    <option value="Germany">Germany</option>
+                                                </select><br/><br>
+                                            </div>
+                                            Receive news of updates?
+                                            <input type="checkbox" name="isCoolguy" value="on"><br>
+                                            <br><button class="button" type="submit">Submit</button></br>
+                                        </form>
 					</div>
 					</div>
 					</div>

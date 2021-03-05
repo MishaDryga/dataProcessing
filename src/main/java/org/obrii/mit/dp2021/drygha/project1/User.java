@@ -5,50 +5,91 @@
  */
 package org.obrii.mit.dp2021.drygha.project1;
 
-/**
- *
- * @author Mkarlos
- */
 import java.util.Arrays;
 import java.util.List;
 
-public class User {
-    
-    
-    private String firstName;
-    private String lastName;
+public class User implements UserInterface {
+    private String name;
     private String phone;
-    private List<String> info;
-    private String wishes;
+    private String gender;
+    private List<String> language;
+    private String country;
+    private boolean isCoolguy;
 
+    
+
+    
+    
     public User() {
     }
-    
-    public User(String firstName, String lastName, String phone, String[] places, String wishes) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+
+    public User(String name, String phone, String gender, String[] language, String country, boolean isCoolguy) {
+        this.name = name;
         this.phone = phone;
-        if (places != null) this.info = Arrays.asList(places);
-        this.wishes = wishes;
+        this.gender = gender;
+        
+        if (language != null ){
+            this.language = Arrays.asList(language);
+        }
+        
+        this.country = country;
+        this.isCoolguy=isCoolguy;
     }
 
-    public String getFirstName() {
-        return firstName;
+    @Override
+    public String getName() {
+        return name;
     }
 
-    public String getLastName() {
-        return lastName;
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
-
+    
+    @Override
     public String getPhone() {
         return phone;
     }
 
-    public List<String> getPlaces() {
-        return info;
+    @Override
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    
+
+    @Override
+    public String getGender() {
+        return gender;
     }
 
-    public String getWishes() {
-        return wishes;
+    @Override
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    @Override
+    public List<String> getLanguage() {
+        return language;
+    }
+
+    @Override
+    public void setLanguage(List<String> language) {
+        this.language = language;
+    }
+
+    @Override
+    public String getCountry() {
+        return country;
+    }
+
+    @Override
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    
+    @Override
+    public String getIsCoolguy() {
+        return isCoolguy ? "You`ll receive news about updates":"You will not receive news about updates";
     }
 }

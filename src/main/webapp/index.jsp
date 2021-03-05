@@ -15,10 +15,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Drygha</title>
     <!-- Bootstrap 4.5 CSS -->
-    <link href="<%=request.getContextPath()%>/WEB-INF/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="<%=request.getContextPath()%>/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     
     <!-- Style CSS -->
-    <link href="<%=request.getContextPath()%>/WEB-INF/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="<%=request.getContextPath()%>/style.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
