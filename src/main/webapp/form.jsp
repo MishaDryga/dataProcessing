@@ -23,13 +23,7 @@
                 <link rel="stylesheet" href="WEB-INF/css/bootstrap.min.css">
                 <!-- Style CSS -->
                 <link rel="stylesheet" href="WEB-INF/css/style.css">
-
-
-		<!-- Web Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
-
-		
+	
 	</head>
 
 	<body class="no-trans">
@@ -88,13 +82,13 @@
 						<div>
 					        <p>that you are interested in?</p>
 						<div class="spans">
-						<span><input id="mountains" type="checkbox" value="Technology" value="technology" name="info"> Technology
+						<span><input id="mountains" type="checkbox" value="Technology" value="technology" name="info">
 						    <label class="sr-only" for="technology">Technology</label>
-                                            </span>
+                                                </span>
 						<span><input id="sea" type="checkbox" value="Law" value="law" name="info"> Law
 							<label class="sr-only" for="law">Law</label>
 						</span>
-						<span><input id="forest" type="checkbox" value="Programming" value="programming" name="info"> Programming
+						<span><input id="forest" type="checkbox" value="Programming" value="programming" name="info">
 							<label class="sr-only" for="programming">Programming</label>
 						</span>
 						</div>

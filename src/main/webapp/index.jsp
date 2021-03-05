@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="WEB-INF/css/bootstrap.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="WEB-INF/css/style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
