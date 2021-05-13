@@ -9,18 +9,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>add</title>
-        <link rel="stylesheet" href="<%=request.getContextPath()%>/reset.css">
-        <link rel="stylesheet" href="<%=request.getContextPath()%>/css.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/styleMain.css">
+        <title>Insert form</title>
     </head>
-    <body id="forma__main">
-        <h1>A list of users</h1>
-        
-        <form action= "<%=request.getContextPath()%>/" method="post">
-            <input type="hidden" name="id" value="0">
-            Name:   <input type="text" name="name" required>
-            Age:    <input type="text" placeholder="int" name="age" maxlength="9" required>
-            <input type="submit" value="Create Data">
+    <body>
+        <h1>Insert data</h1>
+        <form action="<%=request.getContextPath()%>/" method="post">
+            <input type="hidden" name="id" value="0"%>
+            <p>Name:
+            <input type="text" name="name"%></p>
+            <p>Surname:
+            <input type="text" name="surname"%></p>
+            <p>Age:
+            <input type="text" placeholder="integer" name="age"%></p>
+
+            
+            <input class="btns btnsadd" type="submit" value="Create data"/>
         </form>
     </body>
 </html>

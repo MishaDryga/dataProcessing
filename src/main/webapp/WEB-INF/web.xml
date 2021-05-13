@@ -4,9 +4,25 @@
         <servlet-name>DataServlet</servlet-name>
         <servlet-class>org.obrii.mit.dp2021.drygha.project1.DataServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DatabServlet</servlet-name>
+        <servlet-class>org.obrii.mit.dp2021.drygha.project1.servlet.DatabServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FormServlet</servlet-name>
+        <servlet-class>org.obrii.mit.dp2021.drygha.project1.servlet.FormServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DataServlet</servlet-name>
-        <url-pattern></url-pattern>
+        <url-pattern/>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DatabServlet</servlet-name>
+        <url-pattern>/DatabServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FormServlet</servlet-name>
+        <url-pattern>/FormServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
