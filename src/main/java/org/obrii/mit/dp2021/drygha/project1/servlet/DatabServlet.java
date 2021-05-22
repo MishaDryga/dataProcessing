@@ -12,13 +12,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.obrii.mit.dp2021.drygha.project1.springCrud.Crud;
 import org.obrii.mit.dp2021.drygha.project1.springCrud.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 
-@WebServlet(name = "DatabServlet", urlPatterns = {"/"})
+
+
+@WebServlet(name = "DatabServlet", urlPatterns = {"/DatabServlet"})
 public class DatabServlet extends HttpServlet {
 
     @Autowired

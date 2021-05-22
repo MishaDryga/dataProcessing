@@ -11,15 +11,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/reset.css">
-        <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/styleMain.css">
         <title>All hail Lelouch!</title>
     </head>
     <body>
         <div class="wrapper">
             <h1>Welcome to main page</h1>
             <div>
-                <form action="<%=request.getContextPath()%>/" method="get">
+                <form action="<%=request.getContextPath()%>/DatabServlet" method="get">
                     <input name="filter" type="text"%>
                     <input class="btns btnsadd" type="submit" value="Filter"/>
                 </form>
@@ -41,7 +39,7 @@
                         <td><%=datas.getAge()%></td>
 
                         <td>
-                            <form action="form_update.jsp" method="post">
+                            <form action="updateForma.jsp" method="post">
                                 <input type="hidden" name="id" value="<%=datas.getId()%>"/>
                                 <input type="hidden" name="name" value="<%=datas.getName()%>"/>
                                 <input type="hidden" name="surname" value="<%=datas.getSurname()%>"/>
@@ -51,7 +49,7 @@
                             </form>
                         </td>
                         <td>
-                            <form action="<%=request.getContextPath()%>/form" method="get">
+                            <form action="<%=request.getContextPath()%>/FormServlet" method="get">
                                 <input type="hidden" name="id" value="<%=datas.getId()%>"/>
                                 <input class="btns btnsdel" type="submit" value="Delete"/>
                             </form>
@@ -60,7 +58,7 @@
                     <%}%>
                 </table>
             </div>
-                <form action="form.jsp" method="get">
+                <form action="Forma.jsp" method="get">
                 <input class="btns btnsadd" type="submit" value="Add data"/>
             </form>
         </div>

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(name = "FormServlet", urlPatterns = {"/form"})
+@WebServlet(name = "FormServlet", urlPatterns = {"/FormServlet"})
 public class FormServlet extends HttpServlet {
     
     DatabServlet dataServlet = new DatabServlet();
