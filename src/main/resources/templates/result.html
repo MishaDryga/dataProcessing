@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Leonid Lunin</title>
+
+    </head>
+    <body>
+        <div class="background">
+			<h1 class="title">Table</h1>
+						<table class="styled-table">
+								<thead>
+									<tr>
+										<th>name</th>
+										<th>age</th>
+										<th>email</th>
+										<th>...</th>
+										<th>X</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+								<tr th:each="student:${students}">
+                                                                        <form action="./update" method="post">
+                                                                            <input type="hidden" name="url" th:value="${student.getHref()}">
+                                                                            <td><input type="text" name="name" th:value="${student.name}" required/></td>
+                                                                            <td><input type="text" name="age" th:value="${student.age}" required/></td> 
+                                                                            <td><input type="text" name="email" th:value="${student.email}" required/></td>
+                                                                            <td><input type="submit" value="update"/></td>
+                                                                        </form>
+									<td>
+										<form action="./delete" method="post">
+											<input type="hidden" name="url" th:value="${student.getHref()}">                
+											<input type="submit" value="delete"/>
+										</form> 
+									</td>
+								</tr>
+								
+							   <tr>
+								   <form action="./add" method="post">
+										<td>
+											<input type="text" name="name" placeholder="Enter name" required/>
+										</td>
+										<td>
+											<input type="text" name="age" placeholder="Enter age" required/>
+										</td>
+										<td>
+											<input type="text" name="email" placeholder="Enter email" required/>
+										</td>
+										<td>
+											<input type="submit" value="Add new"/>
+										</td>
+									</form>
+								</tr>
+								</tbody>
+							</table>
+											 
+						
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--===============================================================================================-->	
+			<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="vendor/bootstrap/js/popper.js"></script>
+			<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="vendor/select2/select2.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="js/main.js"></script>
+
+			</body>
+		</html>            
