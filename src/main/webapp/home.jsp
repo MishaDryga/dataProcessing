@@ -33,6 +33,9 @@
             <th>Id</th>
             <th>Name</th>
             <th>Age</th>
+            <th></th>
+            <th></th>
+
           </tr>  
         <%for(Data data:dataList){%>
         
