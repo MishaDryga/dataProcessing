@@ -21,7 +21,7 @@ import java.util.logging.Logger;
  *
  * @author Mkarlos
  */
-public class FileInt implements DataInt {
+public class FileInt {
 
     private File file;
 
@@ -32,7 +32,6 @@ public class FileInt implements DataInt {
         this.file = file;
     }
 
-    @Override
     public void writeData(List<Data> data) {
 
         try ( FileOutputStream f = new FileOutputStream(file);  ObjectOutputStream o = new ObjectOutputStream(f)) {
@@ -53,7 +52,6 @@ public class FileInt implements DataInt {
 
     }
 
-      @Override
     public List<Data> searchData(String s) {
 
  
@@ -71,7 +69,6 @@ public class FileInt implements DataInt {
     }
     
     
-    @Override
     public List<Data> readData() {
 
         try ( FileInputStream f = new FileInputStream(file);  ObjectInputStream o = new ObjectInputStream(f)) {
@@ -92,7 +89,6 @@ public class FileInt implements DataInt {
 
     }
 
-    @Override
     public void createData(Data addingData) {
         List<Data> data = this.readData();
         addingData.setId(data.size());
@@ -101,7 +97,6 @@ public class FileInt implements DataInt {
 
     }
 
-    @Override
     public void deleteData(int id) {        
         List<Data> newData = new ArrayList<>();
         for (Data d : this.readData()) {
@@ -112,7 +107,6 @@ public class FileInt implements DataInt {
         this.writeData(newData);
     }
     
-    @Override
     public void updateData(int id, Data data) {        
         List<Data> newData = new ArrayList<>();
         data.setId(id);

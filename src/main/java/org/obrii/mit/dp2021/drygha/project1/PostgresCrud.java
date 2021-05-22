@@ -62,7 +62,7 @@ public class PostgresCrud implements DataInt {
                 data.add(new Data(
                         result.getInt("id"),
                         result.getString("name"),
-                        result.getInt("age"),
+                        result.getInt("age")
                 ));
             }
 
