@@ -17,7 +17,7 @@
         <div class="wrapper">
             <h1>Welcome to main page</h1>
             <div>
-                <form action="<%=request.getContextPath()%>/DatabServlet" method="get">
+                <form action="<%=request.getContextPath()%>/" method="get">
                     <input name="filter" type="text"%>
                     <input class="btns btnsadd" type="submit" value="Filter"/>
                 </form>

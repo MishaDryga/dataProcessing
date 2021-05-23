@@ -21,7 +21,7 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 
 
-@WebServlet(name = "DatabServlet", urlPatterns = {"/DatabServlet"})
+@WebServlet(name = "DatabServlet", urlPatterns = {"/"})
 public class DatabServlet extends HttpServlet {
 
     @Autowired

@@ -7,7 +7,6 @@ package org.obrii.mit.dp2021.drygha.project1.springCrud;
 
 import org.springframework.data.repository.CrudRepository;
 
-
 public interface SpringInterface extends CrudRepository<Users , Integer> {
     
 }

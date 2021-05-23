@@ -7,9 +7,8 @@ package org.obrii.mit.dp2021.drygha.project1.springCrud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
 public class App extends SpringBootServletInitializer{

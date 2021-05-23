@@ -12,29 +12,35 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.obrii.mit.dp2021.drygha.project1.springCrud.Crud;
+import org.obrii.mit.dp2021.drygha.project1.springCrud.Users;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 
 @WebServlet(name = "FormServlet", urlPatterns = {"/FormServlet"})
 public class FormServlet extends HttpServlet {
+    @Autowired
+    DatabServlet DatabServlet;
     
-    DatabServlet dataServlet = new DatabServlet();
-
-     @Override
+    @Override
     public void init(ServletConfig config) throws ServletException {
     super.init(config);
-    dataServlet = new DatabServlet();
-    dataServlet.init(config);
+    DatabServlet = new DatabServlet();
+    DatabServlet.init(config);
     }
+    
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        dataServlet.doDelete(request, response);
+        DatabServlet.doDelete(request, response);
     }
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        dataServlet.doPut(request, response);
+        DatabServlet.doPut(request, response);
     }
 }
+

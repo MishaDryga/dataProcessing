@@ -14,47 +14,50 @@ import org.springframework.stereotype.Component;
 @Component
 public class Crud {
 
-    int id = 1;
-
+    int id=1;
+    
+    
     @Autowired
     SpringInterface SInterface;
-
-    public Crud() {
+    
+    public Crud(){
     }
-
-    public Iterable<Users> readData() {
+    
+    public Iterable<Users> readData(){
         return SInterface.findAll();
     }
-
-    public ArrayList<Users> sortData(String s) {
+    
+            
+    public ArrayList<Users> sortData(String s){
         Iterable<Users> data = SInterface.findAll();
         Iterator<Users> iterator = data.iterator();
-        ArrayList<Users> newData = new ArrayList<>();
+        ArrayList<Users> newData = new ArrayList<Users>();
 
-        while (iterator.hasNext()) {
+        while(iterator.hasNext()){
             Users item = iterator.next();
-            if (item.getName().contains(s)) {
+            if(item.getName().contains(s)){
                 newData.add(item);
             }
         }
         return newData;
     }
-
-    public void createData(Users data) {
-        SInterface.save(data);
+    
+    public void createData(Users users){
+        SInterface.save(users);
     }
-
-    public void deleteData(Integer id) {
+    
+    public void deleteData(Integer id){
         SInterface.deleteById(id);
     }
-
-    public void updateData(Users data, Integer id) {
+    
+    public void updateData(Users users,Integer id){
         Users update = SInterface.findById(id).get();
-        update.setName(data.getName());
-        update.setSurname(data.getSurname());
-        update.setAge(data.getAge());
+        update.setName(users.getName());
+        update.setSurname(users.getSurname());
+        update.setAge(users.getAge());
 
         SInterface.save(update);
     }
+ }
 
-}
+

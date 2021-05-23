@@ -21,9 +21,9 @@ public class Config {
     }
     
     // PostgreSQL
-    private static final String dbURL   = "";
-    private static final String dbUserName   = "";
-    private static final String dbPassword   = "";
+    private static final String dbURL   = "jdbc:postgresql://obrii.org:5432/db2021mit21s3";
+    private static final String dbUserName   = "s3";
+    private static final String dbPassword   = "3254";
 
     public static String getURL() { return dbURL; }
     public static String getDbUser() { return dbUserName; }

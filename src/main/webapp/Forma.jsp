@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Insert data</h1>
-        <form action="<%=request.getContextPath()%>/DatabServlet" method="post">
+        <form action="<%=request.getContextPath()%>/" method="post">
             <input type="hidden" name="id" value="0"%>
             <p>Name:
             <input type="text" name="name"%></p>
