@@ -12,7 +12,7 @@
 	<artifactId>Lab8</artifactId>
 	<version>01</version>
 	<name>Lab8</name>
-	<description>RESTService</description>
+	<description>Demotest</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
